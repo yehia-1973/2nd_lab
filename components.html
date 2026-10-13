@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Studio component library: buttons, cards, tables, forms, modal and alerts">
+  <title>Studio - Component library</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">Studio</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="components.html" aria-current="page">Components</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" id="main">
+
+    <section class="section">
+      <h1>Component library</h1>
+      <p class="label">Every style on this page comes from the CSS variables in styles.css.</p>
+    </section>
+
+    <section class="section">
+      <h2>Design tokens</h2>
+      <div class="swatches">
+        <div class="swatch"><i style="background: var(--primary)"></i><code>--primary #2563eb</code></div>
+        <div class="swatch"><i style="background: var(--bg)"></i><code>--bg #f8fafc</code></div>
+        <div class="swatch"><i style="background: var(--text)"></i><code>--text #1e293b</code></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Buttons</h2>
+      <div class="row">
+        <div>
+          <button class="btn" type="button">Default</button>
+          <div class="label">default</div>
+        </div>
+        <div>
+          <button class="btn is-hover" type="button">Hover</button>
+          <div class="label">hover</div>
+        </div>
+        <div>
+          <button class="btn" type="button" disabled>Disabled</button>
+          <div class="label">disabled</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Card</h2>
+      <article class="card" style="max-width: 360px">
+        <h3>Card title</h3>
+        <p>A short description that explains what this card is about.</p>
+        <a class="btn" href="#" aria-label="Read more about the card">Read more</a>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2>Form elements</h2>
+      <form class="form" action="#" method="get">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email"
+                 aria-describedby="email-hint" required>
+          <span class="hint" id="email-hint">We will only use it to reply to you.</span>
+        </div>
+
+        <div class="field">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option value="">Choose a topic</option>
+            <option value="question">Question about the lab</option>
+            <option value="bug">Report a problem</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="locked">Student ID (locked)</label>
+          <input type="text" id="locked" value="Not editable" disabled>
+        </div>
+
+        <div class="check">
+          <input type="checkbox" id="copy" name="copy">
+          <label for="copy">Send me a copy</label>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn" type="submit">Send message</button>
+          <button class="btn btn-outline" type="reset">Clear form</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="section">
+      <h2>Modal window</h2>
+      <p class="label">Built with the :target selector, no JavaScript.</p>
+      <a class="btn" href="#demo-modal">Open modal</a>
+
+      <div class="modal" id="demo-modal" role="dialog" aria-modal="true"
+           aria-labelledby="modal-title" aria-describedby="modal-text">
+        <a class="modal-backdrop" href="#" aria-label="Close dialog"></a>
+        <div class="modal-box">
+          <h3 id="modal-title">Delete this item?</h3>
+          <p id="modal-text">This action can't be undone. The item will be removed from your list.</p>
+          <div class="modal-actions">
+            <a class="btn btn-outline" href="#">Cancel</a>
+            <a class="btn" href="#">Delete item</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Alerts</h2>
+      <div class="alert alert-success" role="status">
+        <strong>Saved.</strong> Your changes were saved.
+      </div>
+      <div class="alert alert-error" role="alert">
+        <strong>Error.</strong> We could not send your message. Check your connection and try again.
+      </div>
+      <div class="alert alert-warning" role="alert">
+        <strong>Warning.</strong> Your session ends in 5 minutes.
+      </div>
+      <div class="alert alert-info" role="status">
+        <strong>Info.</strong> A new version of the library is available.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Responsive table</h2>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Team members table">
+        <table>
+          <thead>
+            <tr><th scope="col">Name</th><th scope="col">Role</th><th scope="col">Email</th><th scope="col">Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Ada Lovelace</td><td>Engineer</td>
+                <td>ada@example.com</td><td><span class="badge">Active</span></td></tr>
+            <tr><td>Linus Torvalds</td><td>Maintainer</td>
+                <td>linus@example.com</td><td><span class="badge">Active</span></td></tr>
+            <tr><td>Grace Hopper</td><td>Admiral</td>
+                <td>grace@example.com</td><td><span class="badge off">Away</span></td></tr>
+            <tr><td>Alan Turing</td><td>Researcher</td>
+                <td>alan@example.com</td><td><span class="badge">Active</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" style="margin-top: 48px">
+    <div class="container">Component library</div>
+  </footer>
+
+</body>
+</html>

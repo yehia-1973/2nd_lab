@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Studio - a small layout practice with Flexbox and Grid">
+  <title>Studio - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">Studio</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a class="active" href="index.html" aria-current="page">Home</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section class="hero">
+      <h1>Build clean layouts with Flexbox and Grid</h1>
+      <p>This homepage uses Flexbox for the navigation and CSS Grid for the
+         main content. Resize the window: 1 column on phones, 2 on tablets
+         and 3 on desktop.</p>
+      <div class="actions">
+        <a class="btn" href="components.html">View components</a>
+        <a class="btn btn-outline" href="#about">Learn more</a>
+      </div>
+    </section>
+
+    <main class="grid" id="main">
+      <article class="card">
+        <h2>Flexible navigation</h2>
+        <p>The header is a flex container. The logo and links are pushed apart
+           with justify-content.</p>
+      </article>
+      <article class="card">
+        <h2>Grid content</h2>
+        <p>Cards sit in a grid. The gap property handles all the
+           spacing.</p>
+      </article>
+      <article class="card">
+        <h2>Three breakpoints</h2>
+        <p>One column on mobile, two columns from 768px and three columns
+           from 1024px.</p>
+      </article>
+      <section class="card wide" id="about">
+        <h2>About this page</h2>
+        <p>This wide card spans every column. All colors, the radius and the
+           spacing come from CSS variables defined once on :root. Dark mode
+           just changes those variables.</p>
+      </section>
+      <section class="card wide" id="contact">
+        <h2>Contact</h2>
+        <p>Questions about the lab? Send us a message.</p>
+        <a class="btn" href="mailto:ta@example.com">Email the TA</a>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">In-Lab Practice (Studio)</div>
+  </footer>
+
+</body>
+</html>
