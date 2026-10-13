@@ -1,4 +1,4 @@
-# Studio v2
+# 2nd assiment
 
 Layout + component library practice (HTML and CSS only).
 
